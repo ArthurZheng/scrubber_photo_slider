@@ -8,18 +8,16 @@
             leaveToFirst : true
         }, options);
 
+        // the scrub function that produces the image scrubbing effect;
         var scrub = function(elements, itemToShow){
             settings.slider.$GoTo(itemToShow - 1);
-            //elements.css("display", "none");
-            ////console.log("elements passed in are: ", elements);
-            ////console.log("Elements[itemToShow]", elements[itemToShow]);
-            //return $(elements[itemToShow - 1]).css("display", "block");
-                //.after('<div class=\'caption\'><li><img src="../img/alila/thumb-01.jpg" title="Cloudy Skies"  /></li></div>');
-
         };
 
         return this.each(function(){
-            var $this, elements, horizontalTrigger, element_width, element_height, numberOfChildren;
+            var $this, elements, horizontalTrigger;
+
+                // element_width, element_height, numberOfChildren;
+
             $this = $(this);
 
             console.log("$this is ", $this);
