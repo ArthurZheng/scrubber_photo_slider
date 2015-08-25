@@ -71,6 +71,7 @@
             , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
         ];
 
+
         var options = {
             $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
             $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
@@ -78,7 +79,7 @@
 
             $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
             $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-            $SlideDuration: 800,                                //Specifies default duration (swipe) for slide in milliseconds
+            $SlideDuration: 0,                                //Specifies default duration (swipe) for slide in milliseconds
 
             $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
                 $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
@@ -122,7 +123,8 @@
 
         // call the srubber function;
         $("#topSliderTest").scrubber({ slider: jssor_slider1 });
-
+//        jssor_slider1.$SetSlideshowTransitions({$Duration:1200,$Opacity:2});
+//        {$Duration:1200,$Opacity:2}
 
     });
 </script>
@@ -278,6 +280,7 @@
             left: 0px;
             width: 68px;
             height: 68px;
+            /*border: #000 2px solid;*/
             border: #000 2px solid;
             box-sizing: content-box;
             background: url(../img/t01.png) -800px -800px no-repeat;
