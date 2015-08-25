@@ -10,10 +10,10 @@
 
         // the scrub function that produces the image scrubbing effect;
         function _scrub(elements, itemToShow){
-            settings.slider.$GoTo(itemToShow - 1);
+            settings.slider.$GoTo(itemToShow);
             //$().addClass().remveClass()
             $('.c').css("border", "#fff 0px solid").css("width", "68px").css("height", "68px").css("top", "2px").css("left", "2px");
-            $($('.c')[itemToShow - 1]).css("border", "#fff 1px solid").css("width", "70px").css("height", "70px").css("top", "0").css("left", "0");
+            $($('.c')[itemToShow]).css("border", "#fff 1px solid").css("width", "70px").css("height", "70px").css("top", "0").css("left", "0");
         };
 
         // function to calculate the index of image to show;
@@ -21,6 +21,7 @@
             var remaing_index, index;
             remaing_index = Math.ceil((e.pageX - $this.offset().left) / horizontalTrigger);
             index = Math.min(Math.max(remaing_index, 1), numberOfChildren);
+            index -= 1;
             return index;
         }
 
@@ -48,7 +49,7 @@
 
             // bind mouseleve event with the scrubber function;
             return $this.on("mouseleave.scrubber", function(){
-                return _scrub(elements, 1);
+                return _scrub(elements, 0);
             });
         });
     };
