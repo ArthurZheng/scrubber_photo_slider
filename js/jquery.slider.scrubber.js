@@ -9,10 +9,6 @@
         }, options);
 
         // the scrub function that produces the image scrubbing effect;
-        //var scrub = function(elements, itemToShow){
-        //    settings.slider.$GoTo(itemToShow - 1);
-        //};
-        //
         function _scrub(elements, itemToShow){
             settings.slider.$GoTo(itemToShow - 1);
         };
@@ -43,17 +39,11 @@
 
             // bind mousemove event with the scrubber function;
             $this.on('mousemove.scrubber', function(e){
-                //var remaing_index, index;
-                //remaing_index = Math.ceil((e.pageX - $this.offset().left) / horizontalTrigger);
-                //index = Math.min(Math.max(remaing_index, 1), numberOfChildren);
-
-                var index;
-                index = _calculateIndex(e, $this, horizontalTrigger, numberOfChildren);
+                var index = _calculateIndex(e, $this, horizontalTrigger, numberOfChildren);
                 return _scrub(elements, index);
             });
 
-
-            // bind mouse
+            // bind mouseleve event with the scrubber function;
             return $this.on("mouseleave.scrubber", function(){
                 return _scrub(elements, 1);
             });
