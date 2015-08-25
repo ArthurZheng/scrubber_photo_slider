@@ -12,7 +12,7 @@
 <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
 <script type="text/javascript" src="../js/jssor.js"></script>
 <script type="text/javascript" src="../js/jssor.slider.js"></script>
-<script type="text/javascript" src="../js/jquery.jscrubber.js"></script>
+<script type="text/javascript" src="../js/jquery.slider.scrubber.js"></script>
 <script>
 
     jQuery(document).ready(function ($) {
@@ -111,6 +111,7 @@
             else
                 window.setTimeout(ScaleSlider, 30);
         }
+
         ScaleSlider();
 
         $(window).bind("load", ScaleSlider);
@@ -118,13 +119,11 @@
         $(window).bind("orientationchange", ScaleSlider);
         //responsive code end
 
-
-
-//        $("ul.scrubber-horizontal").scrubber();
         $("#topSliderTest").scrubber({ slider: jssor_slider1 });
 
     });
 </script>
+
 <!-- Jssor Slider Begin -->
 <!-- To move inline styles to css file/block, please specify a class name for each element. -->
 <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 800px;
@@ -176,6 +175,7 @@
         .jssora05l.jssora05ldn      (mousedown)
         .jssora05r.jssora05rdn      (mousedown)
         */
+
         .jssora05l, .jssora05r {
             display: block;
             position: absolute;
@@ -183,16 +183,19 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
-            background: url(../img/a17.png) no-repeat;
+            /*background: url(../img/a17.png) no-repeat;*/
             overflow: hidden;
         }
+
         .jssora05l { background-position: -10px -40px; }
         .jssora05r { background-position: -70px -40px; }
         .jssora05l:hover { background-position: -130px -40px; }
         .jssora05r:hover { background-position: -190px -40px; }
         .jssora05l.jssora05ldn { background-position: -250px -40px; }
         .jssora05r.jssora05rdn { background-position: -310px -40px; }
+
     </style>
+
     <!-- Arrow Left -->
         <span u="arrowleft" class="jssora05l" style="top: 158px; left: 8px;">
         </span>
@@ -202,7 +205,9 @@
     <!--#endregion Arrow Navigator Skin End -->
     <!--#region Thumbnail Navigator Skin Begin -->
     <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
+
     <style>
+
         /* jssor slider thumbnail navigator skin 01 css */
         /*
         .jssort01 .p            (normal)
@@ -251,7 +256,7 @@
             height: 68px;
             border: #000 2px solid;
             box-sizing: content-box;
-            background: url(../img/t01.png) -800px -800px no-repeat;
+            /*background: url(../img/t01.png) -800px -800px no-repeat;*/
             _background: none;
         }
 
@@ -305,45 +310,6 @@
     <a style="display: none" href="http://www.jssor.com">Image Slider</a>
 </div>
 <!-- Jssor Slider End -->
-
-
-
-<div class="container">
-    <h1>Mimics iPhoto picture scrubbing feature</h1>
-    <p>Over the pictures to show the effect</p>
-
-</div>
-<div class="container">
-    <div class="content clearfix">
-
-        <div class="box" style="padding: 50px;">
-            <!-- <ul class="scrubber scrubber-vertical"> -->
-            <ul class="scrubber-horizontal">
-                <li><img src="../img/alila/01.jpg"></li>
-                <li><img src="../img/alila/02.jpg"></li>
-                <li><img src="../img/alila/03.jpg"></li>
-                <li><img src="../img/alila/04.jpg"></li>
-            </ul>
-        </div>
-
-    </div>
-    <small>Default iScrubber(Horizontal Mouse MOvement)</small>
-</div>
-<div class="container">
-    <h1>Footer</h1>
-
-</div>
-
-
-<script>
-
-    $(document).ready(function(){
-
-
-    });
-
-</script>
-
 
 
 </body>
