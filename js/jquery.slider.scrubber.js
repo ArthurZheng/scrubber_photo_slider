@@ -11,6 +11,9 @@
         // the scrub function that produces the image scrubbing effect;
         function _scrub(elements, itemToShow){
             settings.slider.$GoTo(itemToShow - 1);
+            //$().addClass().remveClass()
+            $('.c').css("border", "#fff 0px solid").css("width", "68px").css("height", "68px").css("top", "2px").css("left", "2px");
+            $($('.c')[itemToShow - 1]).css("border", "#fff 1px solid").css("width", "70px").css("height", "70px").css("top", "0").css("left", "0");
         };
 
         // function to calculate the index of image to show;
